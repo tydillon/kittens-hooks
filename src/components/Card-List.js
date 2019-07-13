@@ -1,19 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Card from './Card'
 
-const CardList = props => {
-  const [users, setUsers] = useState([])
-  useEffect(() => {
-    fetch('https://randomuser.me/api/?results=10')
-      .then(res => res.json())
-      .then(users => setUsers(users.results))
-  }, [])
+const CardList = ({ users }) => {
   return (
-    <div className="tile is-parent">
+    <section className="tile is-ancestor columns is-multiline">
       {users.map(user => {
-        return <Card key={user.login.uuid} user={user} />
+        return <Card key={user.id} user={user} />
       })}
-    </div>
+    </section>
   )
 }
 

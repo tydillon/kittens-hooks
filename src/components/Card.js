@@ -2,16 +2,15 @@ import React from 'react'
 
 const Card = ({ user }) => {
   return (
-    <div className="tile is-child is-primary">
-      <img
-        alt="kitten"
-        src={`https://robohash.org/${user.login.uuid}?size=200x200&set=set4`}
-      />
-      <h3>
-        {user.name.first} {user.name.last}
-      </h3>
-      <p>{user.gender}</p>
-      <p>{user.location.state}</p>
+    <div className="tile is-parent">
+      <article className="tile is-child box column">
+        <img
+          alt="kitten"
+          src={`https://robohash.org/1${user.id}?set=set4&size=180x180`}
+        />
+        <h3>{user.name}</h3>
+        <p>{user.email}</p>
+      </article>
     </div>
   )
 }
