@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+body {
+  background-image: url('https://www.abeautifulsite.net/uploads/2014/08/congruent-pentagon-outline.png');
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
